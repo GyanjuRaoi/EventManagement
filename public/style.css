@@ -1,0 +1,30 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f8f9fa;
+}
+.form-container {
+    max-width: 400px;
+    width: 100%;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.form-container h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.form-container a {
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+}
+.container-sm {
+    height: 80px;
+    width: 80px;
+
+}
+

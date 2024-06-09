@@ -31,6 +31,7 @@ This event management application allows users to manage events efficiently. Use
 - **Search and Filter**: Search for events by title and filter events by date.
 - **Error Handling**: Custom error pages for 404 (Not Found) and 500 (Internal Server Error).
 - **Middleware**: Protect routes to ensure only logged-in users can access certain features.
+- **Authorization**: Event owners can update and delete events.
 - **REST API**: Utilizes RESTful principles for handling HTTP requests.
 
 ## Prerequisites
