@@ -26,7 +26,7 @@ This event management application allows users to manage events efficiently. Use
 
 1. **Clone the repository**:
     ```bash
-    git clone https://github.com/yourusername/your-repo.git
+    git clone (https://github.com/GyanjuRaoi/EventManagement.git)
     cd your-repo
     ```
 
