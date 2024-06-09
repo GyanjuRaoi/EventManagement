@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= event ? 'Edit Event' : 'New Event' %></title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+        body {
+            margin: 20px;
+        }
+        .form-container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        button {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container form-container">
+        <h1><%= event ? 'Edit Event' : 'New Event' %></h1>
+        <form action="<%= event ? `/update/${event.id}` : `/new` %>" method="POST" class="needs-validation" novalidate>
+            <div class="mb-3">
+                <label for="title" class="form-label">Title:</label>
+                <input type="text" class="form-control" id="title" name="title" value="<%= event ? event.title : '' %>" required>
+                <div class="invalid-feedback">
+                    Please provide a title.
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="description" class="form-label">Description:</label>
+                <textarea class="form-control" id="description" name="description" rows="3" required><%= event ? event.description : '' %></textarea>
+                <div class="invalid-feedback">
+                    Please provide a description.
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="participants" class="form-label">Participants:</label>
+                <input type="number" class="form-control" id="participants" name="participants" value="<%= event ? event.participants : '' %>" required>
+                <div class="invalid-feedback">
+                    Please provide the number of participants.
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="start_date" class="form-label">Start Date:</label>
+                <input type="date" class="form-control" id="start_date" name="start_date" value="<%= event ? event.start_date : '' %>" required>
+                <div class="invalid-feedback">
+                    Please provide a start date.
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="end_date" class="form-label">End Date:</label>
+                <input type="date" class="form-control" id="end_date" name="end_date" value="<%= event ? event.end_date : '' %>" required>
+                <div class="invalid-feedback">
+                    Please provide an end date.
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary"><%= event ? 'Update' : 'Create' %></button>
+        </form>
+    </div>
+
+    <script>
+        (function () {
+            'use strict'
+            var forms = document.querySelectorAll('.needs-validation')
+            Array.prototype.slice.call(forms)
+                .forEach(function (form) {
+                    form.addEventListener('submit', function (event) {
+                        if (!form.checkValidity()) {
+                            event.preventDefault()
+                            event.stopPropagation()
+                        }
+                        form.classList.add('was-validated')
+                    }, false)
+                })
+        })()
+    </script>
+</body>
+</html>
