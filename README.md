@@ -17,7 +17,8 @@ This event management application allows users to manage events efficiently. Use
 - [Configuration](#configuration)
   - [Middleware](#middleware)
   - [Models](#models)
-- [Contributing Guidelines](#contributing-guidelines)
+- [Screenshot](#screenshot)
+
 
 ## Project Overview
 
@@ -59,7 +60,14 @@ Ensure you have the following installed on your machine:
     NODE_ENV=development
     ```
 
-4. **Run the application**:
+4. **Create the necessary JSON files for the datastore**:
+    ```
+    mkdir -p data
+    echo "[]" > data/userData.json
+    echo "[]" > data/eventData.json
+    ```
+
+5. **Run the application**:
     ```bash
     npm start
     ```
@@ -105,26 +113,21 @@ The application uses Bootstrap for styling, along with custom CSS files (`eventl
 - **Event Model**: Manages event data, including fetching, creating, updating, and deleting events.
 - **User Model**: Manages user data, including fetching and creating users.
 
-## Contributing Guidelines
-
-Contributions are welcome! Please fork the repository and create a pull request with your changes.
-
-
 *Author*: Gyanju Rai
 
-Screenshot
+## Screenshot
 
-Landing page / Event List
+**Landing page / Event List**
 ![alt text](image-5.png)
 
-Login 
+**Login** 
 ![alt text](image-1.png)
 
-Register
+**Register**
 ![alt text](image-2.png)
 
-404 Not found
+**404 Not found**
 ![alt text](image-3.png)
 
-Intertnal Server error
+**Intertnal Server error**
 ![alt text](image-4.png)
