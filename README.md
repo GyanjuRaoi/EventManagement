@@ -5,6 +5,8 @@ This event management application allows users to manage events efficiently. Use
 ## Table of Contents
 
 - [Project Overview](#project-overview)
+- [Features](#features)
+- [Prerequisites](#prerequisites)
 - [Installation Instructions](#installation-instructions)
 - [Usage Guide](#usage-guide)
   - [User Registration](#user-registration)
@@ -16,18 +18,32 @@ This event management application allows users to manage events efficiently. Use
   - [Middleware](#middleware)
   - [Models](#models)
 - [Contributing Guidelines](#contributing-guidelines)
-- [License](#license)
 
 ## Project Overview
 
 This event management application allows users to manage events efficiently. Users can register, log in, create new events, update existing events, delete events, and search for events based on titles and dates. The application follows the MVC (Model-View-Controller) pattern to ensure separation of concerns and improve maintainability.
+
+## Features
+
+- **User Authentication**: Register and log in to the application.
+- **Event Management**: Create, update, delete, and view events.
+- **Search and Filter**: Search for events by title and filter events by date.
+- **Error Handling**: Custom error pages for 404 (Not Found) and 500 (Internal Server Error).
+- **Middleware**: Protect routes to ensure only logged-in users can access certain features.
+- **REST API**: Utilizes RESTful principles for handling HTTP requests.
+
+## Prerequisites
+
+Ensure you have the following installed on your machine:
+
+- Node.js
+- npm (Node Package Manager)
 
 ## Installation Instructions
 
 1. **Clone the repository**:
     ```bash
     git clone [https://github.com/GyanjuRaoi/EventManagement.git]
-    cd your-repo
     ```
 
 2. **Install dependencies**:
@@ -93,14 +109,13 @@ The application uses Bootstrap for styling, along with custom CSS files (`eventl
 
 Contributions are welcome! Please fork the repository and create a pull request with your changes.
 
-## License
 
-This project is licensed under the [ISC License](LICENSE).
+*Author*: Gyanju Rai
 
 Screenshot
 
 Landing page / Event List
-![alt text](image.png)
+![alt text](image-5.png)
 
 Login 
 ![alt text](image-1.png)
