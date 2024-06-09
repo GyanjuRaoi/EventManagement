@@ -45,7 +45,7 @@ Ensure you have the following installed on your machine:
 
 1. **Clone the repository**:
     ```bash
-    git clone [https://github.com/GyanjuRaoi/EventManagement.git]
+    git clone https://github.com/GyanjuRaoi/EventManagement.git
     ```
 
 2. **Install dependencies**:
@@ -100,7 +100,7 @@ To log in, navigate to `/login` and enter your credentials.
 
 #### Styles
 
-The application uses Bootstrap for styling, along with custom CSS files (`eventlist.css` and `navBar.css`) to enhance the user interface.
+The application uses Bootstrap for styling, along with custom CSS files (`eventlist.css`, `error.css`, `eventForm.css`, `style.css` and `navBar.css`) to enhance the user interface.
 
 ## Configuration
 
